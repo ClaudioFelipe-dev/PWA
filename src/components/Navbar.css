@@ -1,12 +1,30 @@
 #navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para o h2 do navbar */
+#navbar h2 {
+  color: #7703fc;
+  font-weight: 900;
+}
+
+
+/* Ajustes para telas ainda menores (ex: smartphones) */
+@media (max-width: 480px) {
+  #navbar {
+    padding: 0.5rem;
   }
-  
+
   #navbar h2 {
-    color: #7703fc;
-    font-weight: 900;
+    padding: 0.5rem;
+    font-size: 1.2rem; /* Fontes menores em telas pequenas */
+  }
+
+  .btn{
+    font-size: 0.7em;
+  }
 }
