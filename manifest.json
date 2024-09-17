@@ -1,21 +1,27 @@
 {
-    "name": "Meu App PWA",
-    "short_name": "MeuApp",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#7703fc",
-    "icons": [
-      {
-        "src": "/images/196.png",
-        "sizes": "196x196",
-        "type": "image/png"
-      },
-      {
-        "src": "/images/512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ]
-  }
-  
+  "name": "Meu App",
+  "short_name": "Meu App",
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#ffffff",
+  "theme_color": "#7703fc",
+  "icons": [
+    {
+      "src": "/images/196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "description": "Crie sua Festa e curta bastante sua futura festa",
+  "lang": "pt",
+  "orientation": "portrait",
+  "categories": [
+    "business",
+    "entertainment"
+  ]
+}
