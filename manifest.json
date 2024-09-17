@@ -1,0 +1,21 @@
+{
+    "name": "Meu App PWA",
+    "short_name": "MeuApp",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#7703fc",
+    "icons": [
+      {
+        "src": "/images/196.png",
+        "sizes": "196x196",
+        "type": "image/png"
+      },
+      {
+        "src": "/images/512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
