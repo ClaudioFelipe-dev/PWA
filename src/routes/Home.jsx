@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <h1>Suas Festas</h1>
+      <h1>SuaSSs Festas</h1>
       <div className="parties-container">
         {parties.length == 0 && <p>Nao ha festas cadastradas!</p>}
         {parties.map((party) => (
