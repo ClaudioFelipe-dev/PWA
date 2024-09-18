@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const partyFetch = axios.create({
-  baseURL: "https://api-dog-kappa.vercel.app/",
+  baseURL: "http://localhost:3000/api-pwa",
   headers: {
     "Content-Type": "application/json",
   },
