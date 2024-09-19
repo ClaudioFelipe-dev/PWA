@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const partyFetch = axios.create({
-  baseURL: "https://api-henna-five-66.vercel.app/",
+  baseURL: "https://api-1-wjn8.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
