@@ -118,9 +118,8 @@ const CreateParty = () => {
         </label>
         <label>
           <span>Descrição:</span>
-          <div className="words">
-          </div>
           <textarea
+            className="words"
             placeholder="Conte mais sobre a festa..."
             onChange={(e) => setDescription(e.target.value)}
             value={description}
