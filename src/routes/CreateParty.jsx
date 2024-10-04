@@ -13,8 +13,6 @@ const CreateParty = () => {
   const [date, setDate] = useState("");
   const [image, setImage] = useState("");
   const [partyServices, setPartyServices] = useState([]);
-  const ongoingRef = useRef(false);
-  const recognitionRef = useRef(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -48,47 +46,6 @@ const CreateParty = () => {
       useToast(error.response?.data?.msg || "An error occurred", "error");
     }
   };
-
-  const doStartStopCheck = () => {
-    if (ongoingRef.current) {
-      ongoingRef.current = false;
-      recognitionRef.current.stop();
-      document.getElementById("btn_speech").innerHTML = "Transcrever Audio";
-    } else {
-      ongoingRef.current = true;
-      init();
-    }
-  };
-
-  const init = () => {
-    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    recognitionRef.current = new SpeechRecognition();
-    recognitionRef.current.interimResults = true;
-    recognitionRef.current.lang = "pt-br";
-
-    const words = document.querySelector(".words");
-    let p = document.createElement("span");
-    words.appendChild(p);
-
-    recognitionRef.current.addEventListener("result", (e) => {
-      const transcript = Array.from(e.results)
-        .map((result) => result[0])
-        .map((result) => result.transcript)
-        .join("");
-      p.textContent = transcript + ", ";
-      if (e.results[0].isFinal) {
-        p = document.createElement("span");
-        words.appendChild(p);
-      }
-    });
-
-    recognitionRef.current.addEventListener("end", () => {
-      if (ongoingRef.current) recognitionRef.current.start();
-    });
-
-    recognitionRef.current.start();
-  };
-
   return (
     <div className="form-page">
       <h2>Crie sua próxima Festa</h2>
@@ -119,15 +76,11 @@ const CreateParty = () => {
         <label>
           <span>Descrição:</span>
           <textarea
-            className="words"
             placeholder="Conte mais sobre a festa..."
             onChange={(e) => setDescription(e.target.value)}
             value={description}
             required
           ></textarea>
-          <button type="button" id="btn_speech" onClick={doStartStopCheck}>
-            Transcrever texto
-          </button>
         </label>
         <label htmlFor="budget">
           <span>Orçamento:</span>
